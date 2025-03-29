@@ -149,7 +149,7 @@ courses styling starts here
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
+}
   
 .enroll-button:hover {
     background-color: #0066cc;
@@ -202,8 +202,9 @@ courses styling starts here
     font-size: 16px;
     margin-top: 10px;
 }
-  
-        
+
+/*login page starts here*/
+
 /*
 courses styling ends here
 */
