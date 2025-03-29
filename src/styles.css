@@ -202,12 +202,87 @@ courses styling starts here
     font-size: 16px;
     margin-top: 10px;
 }
+/*
+courses styling ends here*/
+
 
 /*login page starts here*/
+/* Main login section */
+#login-main,
+.login-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 
-/*
-courses styling ends here
-*/
+#login-form,
+.login-form {
+  margin-top: 20px;
+}
+
+.inputfield,
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#login-button,
+.enroll-button {
+  background-color: #004080;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#login-button:hover,
+.enroll-button:hover {
+  background-color: #0059b3;
+}
+
+#forgot-password,
+#signup,
+.forgot {
+  display: block;
+  margin-top: 10px;
+  color: #004080;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* Message Box */
+#message-box,
+.status-message {
+  margin-top: 20px;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.status-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+/*login page ends here*/  
+
 h2
 {
     color: #004080;

@@ -7,6 +7,14 @@ const EnrollmentList = () => {
   useEffect(() => {
     const stored = localStorage.getItem("enrollments");
     if (stored) setEnrolled(JSON.parse(stored));
+
+    const handleStorageChange = () => {
+      const updated = localStorage.getItem("enrollments");
+      if (updated) setEnrolled(JSON.parse(updated));
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+    return () => window.removeEventListener("storage", handleStorageChange);
   }, []);
 
   useEffect(() => {
@@ -17,35 +25,30 @@ const EnrollmentList = () => {
     const updated = enrolled.filter((c) => c.id !== course.id);
     setEnrolled(updated);
   };
-  
-  useEffect(() => {
-    const handleStorageChange = () => {
-      const stored = localStorage.getItem("enrollments");
-      if (stored) {
-        setEnrolled(JSON.parse(stored));
-      }
-    };
-  
-    window.addEventListener("storage", handleStorageChange);
-    return () => {
-      window.removeEventListener("storage", handleStorageChange);
-    };
-  }, []);
-  
 
-  const totalCredits = enrolled.reduce((sum, c) => sum + (c.credit || 3), 0);
+  // assuming 3 hours a week
+  const totalDurationHours = enrolled.reduce((sum, c) => {
+    const weeks = parseInt(c.duration);
+    return sum + (isNaN(weeks) ? 0 : weeks * 3);
+  }, 0);
 
   return (
     <section className="enrollment-section">
-      <h2 className="page-title">Enrolled Courses</h2>
+      <h2 className="page-title">
+        Enrolled Courses <span>({enrolled.length})</span>
+      </h2>
       {enrolled.length === 0 ? (
         <p className="enrollment-empty">You are not enrolled in any courses yet.</p>
       ) : (
         <>
           {enrolled.map((course) => (
-            <EnrolledCourse key={course.id} course={course} onDrop={handleDrop} />
+            <div key={course.id} className="enrolled-course">
+              <h3>{course.name}</h3>
+              <p><strong>Duration:</strong> {course.duration}</p>
+              <button className="drop-button" onClick={() => handleDrop(course)}>Drop Course</button>
+            </div>
           ))}
-          <p><strong>Total Credit Hours:</strong> {totalCredits}</p>
+          <p><strong>Total Hours:</strong> {totalDurationHours} hours</p>
         </>
       )}
     </section>
