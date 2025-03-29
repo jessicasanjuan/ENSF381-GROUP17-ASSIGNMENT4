@@ -1,3 +1,4 @@
+import course1 from "../images/course1.jpg";
 const courses = [
     {
         id: 1,
@@ -5,7 +6,7 @@ const courses = [
         instructor: "Dr. John Smith",
         description: "Master HTML, CSS, and JavaScript.",
         duration: "8 weeks",
-        image: "images/course1.jpg"
+        image: course1
     },
     {
         id: 2,
@@ -13,7 +14,7 @@ const courses = [
         instructor: "Dr. Jane Doe",
         description: "Learn Python, Pandas, and Machine Learning.",
         duration: "10 weeks",
-        image: "images/course1.jpg"
+        image: course1
     },
     {
         id: 3,
@@ -21,7 +22,7 @@ const courses = [
         instructor: "Mr. Alex Brown",
         description: "Design user-friendly interfaces with Figma.",
         duration: "6 weeks",
-        image: "images/course1.jpg"
+        image: course1
     },
     {
         id: 4,
@@ -29,7 +30,7 @@ const courses = [
         instructor: "Dr. Greg Moore",
         description: "Understand AWS and Azure fundamentals.",
         duration: "9 weeks",
-        image: "images/course1.jpg"
+        image: course1
     },
     {
         id: 5,
@@ -37,7 +38,7 @@ const courses = [
         instructor: "Dr. Robert Lee",
         description: "Learn ethical hacking and network defense.",
         duration: "8 weeks",
-        image: "images/course1.jpg"
+        image: course1
     }, 
     {
         id: 6,
@@ -45,7 +46,7 @@ const courses = [
         instructor: "Dr. Tony Stark",
         description: "Build apps with Flutter and React Native.",
         duration: "7 weeks",
-        image: "images/course1.jpg"
+        image: course1
     }, 
     {
         id: 7,
@@ -53,7 +54,7 @@ const courses = [
         instructor: "Dr. Steve Rogers",
         description: "Master SEO, SEM, and social media campaigns.",
         duration: "5 weeks",
-        image: "images/course1.jpg"
+        image: course1
     }, 
     {
         id: 8,
@@ -61,7 +62,7 @@ const courses = [
         instructor: "Dr. Bruce Banner",
         description: "Explore deep learning and neural networks.",
         duration: "12 weeks",
-        image: "images/course1.jpg"
+        image: course1
     }, 
     {
         id: 9,
@@ -69,7 +70,7 @@ const courses = [
         instructor: "Dr. Natasha Romanoff",
         description: "Learn SQL and NoSQL database management.",
         duration: "6 weeks",
-        image: "images/course1.jpg"
+        image: course1
     }, 
     {
         id: 10,
@@ -77,7 +78,7 @@ const courses = [
         instructor: "Dr. Peggy Carter",
         description: "Agile, Scrum, and leadership essentials.",
         duration: "4 weeks",
-        image: "images/course1.jpg"
+        image: course1
     }
 ];
 export default courses;
